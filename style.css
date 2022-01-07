@@ -13,6 +13,8 @@
 #clock {
   width: 80vh;
   height: 80vh;
+  max-width: 50em;
+  max-height: 50em;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -48,6 +50,17 @@
   color: #fff;
   left: 0;
   bottom: 0;
+}
+
+@media (max-width: 425px) {
+  #clock {
+    width: 80vw;
+    height: 80vw;
+  }
+  
+  .clock__segment:after {
+    font-size: 0.8em;
+  }
 }
 
 @keyframes rotation {
