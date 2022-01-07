@@ -1,0 +1,60 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#clock {
+  width: 80vh;
+  height: 80vh;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  animation: rotation 10s infinite linear;
+}
+
+.clock__segment {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translate(0, -50%) rotate(90deg) rotate(calc(var(--offset, 0) * 1deg));
+  transform-origin: 50% 100%;
+  width: 100%;
+}
+
+.clock__segment:before {
+  background: var(--color);
+  content: '';
+  height: 100%;
+  position: absolute;
+  transform: translate(-50%, 100%) rotate(calc(var(--value, 45) * 1deg));
+  transform-origin: 50% 0%;
+  width: 100%;
+}
+
+.clock__segment:after {
+  content: var(--label);
+  position: absolute;
+  text-transform: uppercase;
+  min-width: 8em;
+  transform: translate(-15%, -240%) rotate(-65deg);
+  font-size: 1.6em;
+  color: #fff;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="clock">
+        <div class="clock__segment" style="--offset: 0; --value: calc(360/7); --color: red; --label: 'Monday'"></div>
+        <div class="clock__segment" style="--offset: calc(360/7); --value: calc(360/7); --color: orange; --label: 'Tuesday'"></div>
+        <div class="clock__segment" style="--offset: calc(360/7*2); --value: calc(360/7); --color: rgb(253, 232, 38); --label: 'Wednesday'"></div>
+        <div class="clock__segment" style="--offset: calc(360/7*3); --value: calc(360/7); --color: green; --label: 'Thursday'"></div>
+        <div class="clock__segment" style="--offset: calc(360/7*4); --value: calc(360/7); --color: blue; --label: 'Friday'"></div>
+        <div class="clock__segment" style="--offset: calc(360/7*5); --value: calc(360/7); --color: indigo; --label: 'Saturday'"></div>
+        <div class="clock__segment" style="--offset: calc(360/7*6); --value: calc(360/7); --color: violet; --label: 'Sunday'"></div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
